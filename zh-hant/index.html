@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;">
   <meta name="description" content="世界上最好用的動態歌詞格式產生器，輕鬆產生同步歌詞。">
   <meta name="keywords" content="lrc, generator, creator, 動態歌詞格式產生器, 歌詞同步, 免費, 工具, 最好用的 LRC 產生器, lyrics synchronizer, lyrics sync">
   <meta property="og:url" content="https://lrc-generator.streetvoice.com/tw/">
@@ -24,13 +25,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+HK:wght@200..900&display=swap" rel="stylesheet">
   <title>LRC 動態歌詞產生器 | 免費線上工具</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LRC 動態歌詞產生器",
+    "description": "世界上最好用的動態歌詞格式產生器，輕鬆產生同步歌詞。",
+    "url": "https://lrc-generator.streetvoice.com/zh-hant/",
+    "applicationCategory": "MusicApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TWD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "StreetVoice 街聲"
+    }
+  }
+  </script>
   <script src="../static/libs/wavesurfer.min.js"></script>
   <script src="../static/libs/wavesurfer.cursor.min.js"></script>
 </head>
 
 <body>
   <header class="text-center">
-    <img src="../static/images/logo-sv-r.svg" />
+    <img src="../static/images/logo-sv-r.svg" alt="StreetVoice Logo" />
     <h1>LRC 動態歌詞產生器</h1>
   </header>
 
@@ -77,9 +98,9 @@
   </footer>
 
   <div class="tips-wrapper d-flex collapse" id="collapse-tips">
-    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse-tips" aria-expanded="false" aria-controls="collapse-tips">
-      <span class="icon-bulb"></span>
-      <span class="icon-close"></span>
+    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse-tips" aria-expanded="false" aria-controls="collapse-tips" aria-label="顯示/隱藏使用說明">
+      <span class="icon-bulb" aria-hidden="true"></span>
+      <span class="icon-close" aria-hidden="true"></span>
     </button>
     <div class="tips-info">
       <h3>按鈕說明</h3>
@@ -135,16 +156,16 @@
       <div class="tooltip position-absolute">
         點擊播放按鈕後，再在要標記的時間點擊標記按鈕就可以囉！
       </div>
-      <button class="btn-link">
-        <span class="icon-backward"></span>
+      <button class="btn-link" aria-label="快退 5 秒">
+        <span class="icon-backward" aria-hidden="true"></span>
       </button>
-      <button class="btn-link">
-        <span class="icon-forward"></span>
+      <button class="btn-link" aria-label="快進 5 秒">
+        <span class="icon-forward" aria-hidden="true"></span>
       </button>
-      <button id="playPause" class="btn-circle btn-white" disabled>
-        <span class="icon-play"></span>
-        <span class="icon-pause d-none"></span>
-        <span class="icon-loading d-none"></span>
+      <button id="playPause" class="btn-circle btn-white" disabled aria-label="播放/暫停">
+        <span class="icon-play" aria-hidden="true"></span>
+        <span class="icon-pause d-none" aria-hidden="true"></span>
+        <span class="icon-loading d-none" aria-hidden="true"></span>
       </button>
       <button id="tag-button" class="btn-circle btn-red" aria-label="標記時間">
         <span class="icon-time"></span>

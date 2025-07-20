@@ -1,0 +1,6 @@
+node_modules/
+*.min.js
+*.min.css
+static/libs/
+static/fonts/
+static/images/ 
